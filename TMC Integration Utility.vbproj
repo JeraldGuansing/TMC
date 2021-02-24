@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D576FC73-790F-4145-ACB6-F45CAC992651}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TMC_Integration_Utility.My.MyApplication</StartupObject>
+    <RootNamespace>TMC_Integration_Utility</RootNamespace>
+    <AssemblyName>TMC Integration Utility</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TMC Integration Utility.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TMC Integration Utility.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\APPRegistry.vb" />
+    <Compile Include="Class\APP_DotNet.vb" />
+    <Compile Include="Class\BOELines.vb" />
+    <Compile Include="Class\Deposit\CheckLines.vb" />
+    <Compile Include="Class\Deposit\CreditLines.vb" />
+    <Compile Include="Class\Deposit\Deposit.vb" />
+    <Compile Include="Class\Deposit\IncomingPayDep.vb" />
+    <Compile Include="Class\Deposit\IncomingPaymentInvoices.vb" />
+    <Compile Include="Class\IncomingPayment\Company\CompanyPatment_Header.vb" />
+    <Compile Include="Class\IncomingPayment\Company\CompanyPayment_CreditCards.vb" />
+    <Compile Include="Class\IncomingPayment\Company\CompanyPayment_Check.vb" />
+    <Compile Include="Class\IncomingPayment\Company\CompanyPayment_Invoices.vb" />
+    <Compile Include="Class\InventoryTransaction\Dispense.vb" />
+    <Compile Include="Class\InventoryTransaction\Dispense_Line.vb" />
+    <Compile Include="Class\InventoryTransaction\Inventory_Transaction_Batch.vb" />
+    <Compile Include="Class\InventoryTransfer\InventoryTransfer_BatchDetails.vb" />
+    <Compile Include="Class\InventoryTransfer\InventoryTransfer_Details.vb" />
+    <Compile Include="Class\InventoryTransfer\InventoryTransfer_Header.vb" />
+    <Compile Include="Class\Deposit\Invoice_DocInstallation.vb" />
+    <Compile Include="Class\PatientBill\Invoice_DocLine.vb" />
+    <Compile Include="Class\MasterData\Items.vb" />
+    <Compile Include="Class\MasterData\ItemWarehouseInfoCollection.vb" />
+    <Compile Include="Class\LoginClass.vb" />
+    <Compile Include="Class\PatientBill\PatientBill.vb" />
+    <Compile Include="Class\PatientBill\DocLine1.vb" />
+    <Compile Include="Class\PatientBill\DocLine2.vb" />
+    <Compile Include="Class\PatientBill\hmos.vb" />
+    <Compile Include="Class\PatientBill\PB_DownPaymentsToDraw.vb" />
+    <Compile Include="Class\PatientBill\ProffesionalFees.vb" />
+    <Compile Include="Class\Deposit\PaymentChecks.vb" />
+    <Compile Include="Class\Deposit\PaymentCreditCards.vb" />
+    <Compile Include="Class\Deposit\PaymentDepMode.vb" />
+    <Compile Include="Class\PatientBill\Payor.vb" />
+    <Compile Include="Class\PurchaseRequest\PR_DocLine.vb" />
+    <Compile Include="Class\MasterData\UoM.vb" />
+    <Compile Include="Class\MasterData\UomGroup.vb" />
+    <Compile Include="Class\MasterData\UoMGroupDefinitionCollection.vb" />
+    <Compile Include="Class\ReadersFee\readersFee.vb" />
+    <Compile Include="Class\UserFieldsMD.vb" />
+    <Compile Include="frmConfig.Designer.vb">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\global_.vb" />
+    <Compile Include="Modules\Main.vb" />
+    <Compile Include="Modules\WEBAPI.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30090}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
